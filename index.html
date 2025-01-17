@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>The Wedding of Putri & Putra</title>
+</head>
+<body>
+
+    <section id="awal" class="absolute z-10">
+        <div id="content">
+            <div class="h-screen bg-cover bg-center"  style="background-image: url('img/download\ \(1\).png');">
+                <div class="absolute inset-0 grid justify-center items-center bg-gradient-to-r from-transparent to-black/80 w-full">
+                    <div class="text-center text-white font-sans">
+                        <p class="text-sm lg:text-xl">Dear,</p>
+                        <p class="text-lg lg:text-2xl font-bold">Everything</p>
+                        <p class="text-lg lg:text-xl">You Are Invited!</p>
+                        <div class="mt-20 lg:mt-32">
+                            <p class="text-sm lg:text-xl">The Wedding Celebration of</p>
+                            <p class="text-lg lg:text-2xl font-bold">Putri & Putra</p>
+                            <button id="btn-open-invitation" class="mt-5 lg:py-2 lg:px-20 py-3 px-4 border border-white text-dark text-sm lg:text-base rounded-lg bg-white hover:scale-110 hover:shadow-xl relative z-10">
+                                <i class="fas fa-envelope-open-text"></i> Open Invitation
+                            </button>                   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- home -->
+    <div id="home" class="relative flex h-full text-white overflow-hidden -z-10">
+
+        <!-- kiri -->
+        <div class="md:w-2/3 fixed z-20">
+
+            <!-- Background Image Section -->
+            <div class="relative hidden lg:block overflow-hidden">
+                <img src="img/download (1).png" alt="A couple in a red boat on a lake with forested hills in the background" class="w-full h-screen object-cover"/>
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-black/80"></div>
+                <div class="absolute top-[480px] right-10 text-right">
+                    <div class="icon text-2xl animate-slide-in-bawah px-12 mb-4 grid z-10">
+                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <p class="text-md text-white px-4 mb-4">Scroll Kebawah</p>
+                    <h1 class="text-lg md:text-xl font-bold text-white mb-4">The Wedding of Melia & Galang</h1>
+                </div>
+            </div>
+
+            
+            <div class="fixed lg:absolute bottom-11 lg:bottom-20 lg:top-[550px] left-4 lg:left-4 z-10">
+                <!-- Piring Hitam (Vinyl) dengan tombol Play di tengah -->
+                <div id="vinyl" class="vinyl">
+                    <div class="groove"></div>
+                    <div class="center"></div>
+                    <button id="playPauseBtn" onclick="togglePlayPause()" class="btn-play-pause">
+                        &#9658; <!-- Simbol play -->
+                    </button>
+                </div>
+                <!-- Audio Element -->
+                <audio id="audio" src="song/Ed Sheeran - Thinking out Loud (Lyrics) - 7clouds (youtube).mp3" preload="auto"></audio>
+
+                <!-- Status untuk Play/Pause -->
+                <p id="status" class="mt-4 text-lg"></p>
+            </div>
+            
+        </div>
+
+        
+
+
+
+
+
+        <!-- kanan -->
+        <div class="md:w-1/3 ml-auto relative">
+
+            <!-- content 1 -->
+            <img src="img/utama.jpg" class="w-full h-[850px] md:h-auto overflow-hidden relative">
+            <div class="absolute top-20 left-1/2 transform -translate-x-1/2 text-center text-white">
+                <!-- Curved Text -->
+                <svg viewBox="0 0 200 100" class="w-56 h-24 mx-auto">
+                    <path id="curve" d="M50,90 A60,60 0 0,1 150,90" fill="transparent" />
+                    <text fill="white" font-size="18" font-family="serif">
+                        <textPath href="#curve" startOffset="50%" text-anchor="middle">
+                            Our Wedding
+                        </textPath>
+                    </text>
+                </svg>
+                <!-- Main Text -->
+                <h1 class="text-3xl font-bold mt-[-10px]">Putri & Putra</h1>
+                <p class="text-lg font-light mt-2">01 Januari 2025</p>
+            </div>
+
+
+
+
+
+
+            <div class="relative z-10">
+                <img src="img/elemen/Group 30.png" id="aset1" class="absolute w-[70px] left-[43%] -top-7">
+                <img src="img/elemen/kiri.png" id="aset2" class="absolute w-[160px] -left-3">
+                <img src="img/elemen/kanan.png" id="aset3" class="absolute w-[160px] -right-3">
+            </div>
+            <!-- content 2 -->
+            <div class="relative bg-cover w-full h-auto pt-16 p-14 px-14 md:px-16" style="background-image: url('img/12aa539261acddf2dd522cd21528311c.jpg');">
+
+                <div class="grid items-center justify-center px-2 md:px-5 pt-28 md:pt-32 pb-14 md:pb-24 z-20 text-center">
+                    <h1 class="text-sm text-center font-serif pb-8">“Dan diantara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya dan Dia menjadikan diantaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.“</h1>
+                    <h1 class="text-lg font-serif">(QS. Ar-Rum ayat 21)</h1>
+                </div>
+
+                <img src="img/elemen/Group 32.png" alt="" class="absolute left-[45%] top-[34%]">
+                <img src="img/utama.jpg" alt="" class="w-full h-full rounded-xl pb-14 md:pb-24">
+                
+
+
+                <div class="mt-10 mb-10 pt-5 border border-solid bg-white rounded-3xl text-dark px-10 pb-10 text-center">
+                    <div class="relative flex items-center justify-center pb-5">
+                        <img src="img/elemen/Group 30.png" alt="" class="w-[60px]">
+                    </div>
+                    <p class="text-sm">“A great marriage is not when the ‘perfect couple’ comes together. It is when an imperfect couple learns to enjoy their differences.”</p>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="relative z-10">
+                <img src="img/elemen/Group 30.png" id="aset4" class="absolute w-[70px] left-[43%] top-5">
+                <img src="img/elemen/kiri.png" id="aset5" class="absolute w-[160px] -left-3">
+                <img src="img/elemen/kanan.png" id="aset6" class="absolute w-[160px] -right-3">
+            </div>
+            <!-- content-3 -->
+            <div class="relative bg-cover w-full h-auto pt-36 pb-56 p-14 px-14 md:px-16" style="background-image: url('img/photo-1698067929252-5821e0c4b874.jpeg');">
+                <div class="wnta pb-60">
+                    <img src="img/wnta.png" alt="" class="w-full h-[400px] rounded-xl border border-solid border-white">
+                    <div class="mt-10 pt-5 border border-solid bg-white rounded-3xl text-dark px-28 pb-5 text-center absolute top-[485px] left-[17%]">
+                        <h2 class="text-xl md:text-2xl font-bold mb-2">Putri</h2>
+                        <p class="text-sm">Putri dari</p>
+                        <p class="text-sm">Bapak Putra</p>
+                        <p class="text-sm">& Ibu Putri</p>
+                        <div class="mt-10">
+                        <a href="#" class="text-gray-800 hover:text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.056 2.015.24 2.682.514a5.417 5.417 0 011.905 1.213 5.417 5.417 0 011.213 1.905c.275.667.458 1.512.514 2.682.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 2.015-.514 2.682a5.417 5.417 0 01-1.213 1.905 5.417 5.417 0 01-1.905 1.213c-.667.275-1.512.458-2.682.514-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-2.015-.24-2.682-.514a5.417 5.417 0 01-1.905-1.213 5.417 5.417 0 01-1.213-1.905c-.275-.667-.458-1.512-.514-2.682C2.175 15.784 2.163 15.404 2.163 12s.012-3.584.07-4.85c.056-1.17.24-2.015.514-2.682A5.417 5.417 0 013.96 3.563a5.417 5.417 0 011.905-1.213c.667-.275 1.512-.458 2.682-.514C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.74 0 8.332.013 7.052.073 5.773.133 4.86.285 4.08.54a7.418 7.418 0 00-2.727 1.737A7.418 7.418 0 00.54 4.08C.285 4.86.133 5.773.073 7.052.013 8.332 0 8.74 0 12c0 3.26.013 3.668.073 4.948.06 1.279.212 2.192.467 2.972a7.418 7.418 0 001.737 2.727 7.418 7.418 0 002.727 1.737c.78.255 1.693.407 2.972.467 1.279.06 1.687.073 4.948.073s3.668-.013 4.948-.073c1.279-.06 2.192-.212 2.972-.467a7.418 7.418 0 002.727-1.737 7.418 7.418 0 001.737-2.727c.255-.78.407-1.693.467-2.972.06-1.279.073-1.687.073-4.948s-.013-3.668-.073-4.948c-.06-1.279-.212-2.192-.467-2.972a7.418 7.418 0 00-1.737-2.727A7.418 7.418 0 0019.92.54c-.78-.255-1.693-.407-2.972-.467C15.668.013 15.26 0 12 0zm0 5.838A6.162 6.162 0 005.838 12 6.162 6.162 0 0012 18.162 6.162 6.162 0 0018.162 12 6.162 6.162 0 0012 5.838zm0 10.324A4.162 4.162 0 017.838 12 4.162 4.162 0 0112 7.838 4.162 4.162 0 0116.162 12 4.162 4.162 0 0112 16.162zm6.406-10.845a1.44 1.44 0 11-2.881-.001 1.44 1.44 0 012.881.001z"/>
+                            </svg>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pria pt-40 mb-20">
+                    <img src="img/pria.png" alt="" class="w-full h-[400px] rounded-xl border border-solid border-white">
+                    <div class="mt-10 pt-5 border border-solid bg-white rounded-3xl text-dark px-28 pb-5 text-center absolute bottom-32 left-[17%]">
+                        <h2 class="text-xl md:text-2xl font-bold mb-2">Putra</h2>
+                        <p class="text-sm">Putra dari</p>
+                        <p class="text-sm">Bapak Putra</p>
+                        <p class="text-sm">& Ibu Putri</p>
+                        <div class="mt-10">
+                        <a href="#" class="text-gray-800 hover:text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.056 2.015.24 2.682.514a5.417 5.417 0 011.905 1.213 5.417 5.417 0 011.213 1.905c.275.667.458 1.512.514 2.682.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 2.015-.514 2.682a5.417 5.417 0 01-1.213 1.905 5.417 5.417 0 01-1.905 1.213c-.667.275-1.512.458-2.682.514-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-2.015-.24-2.682-.514a5.417 5.417 0 01-1.905-1.213 5.417 5.417 0 01-1.213-1.905c-.275-.667-.458-1.512-.514-2.682C2.175 15.784 2.163 15.404 2.163 12s.012-3.584.07-4.85c.056-1.17.24-2.015.514-2.682A5.417 5.417 0 013.96 3.563a5.417 5.417 0 011.905-1.213c.667-.275 1.512-.458 2.682-.514C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.74 0 8.332.013 7.052.073 5.773.133 4.86.285 4.08.54a7.418 7.418 0 00-2.727 1.737A7.418 7.418 0 00.54 4.08C.285 4.86.133 5.773.073 7.052.013 8.332 0 8.74 0 12c0 3.26.013 3.668.073 4.948.06 1.279.212 2.192.467 2.972a7.418 7.418 0 001.737 2.727 7.418 7.418 0 002.727 1.737c.78.255 1.693.407 2.972.467 1.279.06 1.687.073 4.948.073s3.668-.013 4.948-.073c1.279-.06 2.192-.212 2.972-.467a7.418 7.418 0 002.727-1.737 7.418 7.418 0 001.737-2.727c.255-.78.407-1.693.467-2.972.06-1.279.073-1.687.073-4.948s-.013-3.668-.073-4.948c-.06-1.279-.212-2.192-.467-2.972a7.418 7.418 0 00-1.737-2.727A7.418 7.418 0 0019.92.54c-.78-.255-1.693-.407-2.972-.467C15.668.013 15.26 0 12 0zm0 5.838A6.162 6.162 0 005.838 12 6.162 6.162 0 0012 18.162 6.162 6.162 0 0018.162 12 6.162 6.162 0 0012 5.838zm0 10.324A4.162 4.162 0 017.838 12 4.162 4.162 0 0112 7.838 4.162 4.162 0 0116.162 12 4.162 4.162 0 0112 16.162zm6.406-10.845a1.44 1.44 0 11-2.881-.001 1.44 1.44 0 012.881.001z"/>
+                            </svg>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
+            
+
+            
+            <!-- content 4 -->
+            <div class="bg-cover w-full h-auto pt-16 pb-20 p-14 px-5 md:px-10" style="background-image: url('img/utama.jpg');">
+                <div class="pt-10 border border-solid bg-[rgba(169,169,169,0.3)] rounded-3xl text-dark px-2 md:px-10 pb-10">
+                   
+                    <!-- isi1 content -->
+                    <div class="items-center justify-center grid">
+                        <img src="img/Group 35.png" alt="">
+                    </div>
+                    <div class="text-center text-white">
+                        <h1 class="text-lg md:text-xl font-semibold mt-2">Akad Nikah</h1>
+                        <h1 class="text-sm font-semibold mt-5 md:mt-10">Rabu, 1 Januari 2025</h1>
+                        <h1 class="text-sm">08.00 s/d 10.00 WIB</h1>
+                        <h1 class="text-base mt-5">Jl. HZ. Mustofa. Kota Tasikmalaya</h1>
+                        <div class="flex items-center justify-center pt-3">
+                            <a href="#" class="flex items-center justify-center text-dark bg-white md:py-2 md:px-12 py-1 px-3 rounded-full shadow-lg transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl w-auto max-w-xs">
+                                <img src="img/Group 36.png" alt="" class="w-[20px] lg:w-[20px]">
+                                <span class="text-sm">Google Maps</span> 
+                            </a>                              
+                        </div> 
+                    </div>
+                
+                    <!-- isi2 content -->
+                    <div class="items-center justify-center grid mt-10">
+                        <img src="img/Group 34.png" alt="">
+                    </div>
+                    <div class="text-center text-white">
+                        <h1 class="text-lg md:text-xl font-semibold mt-2">Resepsi Pernikahan</h1>
+                        <h1 class="text-sm font-semibold mt-5 md:mt-10">Rabu, 1 Januari 2025</h1>
+                        <h1 class="text-sm">08.00 s/d 10.00 WIB</h1>
+                        <h1 class="text-sm md:text-base mt-5">Jl. HZ. Mustofa. Kota Tasikmalaya</h1>
+                        <div class="flex items-center justify-center pt-3">
+                            <a href="#" class="flex items-center justify-center text-dark bg-white md:py-2 md:px-12 py-1 px-3 rounded-full shadow-lg transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl w-auto max-w-xs">
+                                <img src="img/Group 36.png" alt="" class="w-[20px] lg:w-[20px]">
+                                <span class="text-sm">Google Maps</span> 
+                            </a>                              
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="relative z-10">
+                <img src="img/elemen/Group 30.png" id="aset7" class="absolute w-[70px] left-[43%] -top-5">
+                <img src="img/elemen/kiri.png" id="aset8" class="absolute w-[160px] -left-3">
+                <img src="img/elemen/kanan.png" id="aset9" class="absolute w-[160px] -right-3">
+            </div>
+            <!-- content 5 -->
+            <div class="relative bg-cover w-full h-[1800px] md:pb-20 pt-14 p-14 px-5 md:px-10" style="background-image: url('img/12aa539261acddf2dd522cd21528311c.jpg');">
+                <div class=" w-full h-auto p-10 pt-20 text-white -z-10">
+                    <div class="text-center mb-10">
+                        <h1 class="text-3xl lg:text-3xl font-bold">RSVP</h1>
+                    </div>
+                
+                    <div class="flex justify-center text-center items-center mb-6">
+                        <p class="text-2xl lg:text-sm leading-relaxed">
+                            Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir 
+                            untuk memberikan doa restu kepada kedua mempelai. Mohon konfirmasi kehadiran Bapak/Ibu/Saudara/i. 
+                            Terima kasih.
+                        </p>
+                    </div>
+                
+                    <div class="button-group flex gap-0 mb-6 rounded-xl">
+                        <button id="btn-attend" class="btn bg-none border border-solid border-white text-white px-4 py-2 text-sm lg:text-base rounded-l-none rounded-t-none shadow transition active:text-black" onclick="toggleGuestInput(true, 'btn-attend')">Saya akan hadir</button>
+                        <button id="btn-decline" class="btn bg-none border border-solid border-white text-white px-4 py-2 text-sm lg:text-base rounded-r-none rounded-t-none shadow transition active:text-black" onclick="toggleGuestInput(false, 'btn-decline')">Maaf tidak bisa</button>
+                    </div>
+                    
+                    
+
+                    
+                    <div id="guest-input" class="mb-6 hidden">
+                        <label for="guest-count" class="block text-sm lg:text-sm font-medium text-white mb-2">Jumlah Tamu:</label>
+                        <input type="number" id="guest-count" name="guest-count" min="1" value="1" class="w-full text-black p-6 lg:p-3 border text-sm lg:text-base border-white rounded shadow text-center ">
+                    </div>
+
+                    <div class="grid  mb-6">
+                        <label for="guest-count" class="block text-sm lg:text-sm font-medium text-white mb-2">Masukan Nama:</label>
+                        <input type="text" name="guest-count" id="guest-count" class="text-left text-black w-full p-6 lg:p-3 border text-sm lg:text-base border-white rounded shadow ">
+                    </div>
+
+                   
+                    <div class="grid  mb-6">
+                        <label for="guest-count" class="block text-sm lg:text-sm font-medium text-white mb-2">Tinggalkan Pesan:</label>
+                        <textarea name="ucapan" id="guest-count" class="text-left text-black w-full p-6 lg:p-3 border text-sm lg:text-base border-white rounded shadow "></textarea>
+                    </div>
+
+                    <div class="flex justify-center items-center pb-20">
+                        <button class="submit-button bg-white text-black px-6 py-2 rounded shadow  transition text-sm lg:text-base">
+                            Kirim
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <img src="img/elemen/Group 32.png" alt="" class="absolute left-[45%] -top-[4%]">
+                <img src="img/utama.jpg" alt="" class="w-full h-auto rounded-xl pb-14 md:pb-16">
+                </div>
+                
+                
+                <div class="mt-5 mb-10 pt-5 border border-solid bg-white rounded-3xl text-dark px-10 pb-10 text-center">
+                    <div class="relative flex items-center justify-center pb-5">
+                        <img src="img/elemen/Group 30.png" alt="" class="w-[60px]">
+                    </div>
+                    <p class="text-sm">“A great marriage is not when the ‘perfect couple’ comes together. It is when an imperfect couple learns to enjoy their differences.”</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="relative bg-cover w-full h-auto md:pb-20 pt-14 p-14 px-5 md:px-10" style="background-image: url('img/12aa539261acddf2dd522cd21528311c.jpg');">
+                <div class="items-center justify-center grid">
+                    <img src="img/Group 33.png" alt="">
+                </div>
+            
+                <div class="text-center text-white">
+                    <h1 class="text-lg md:text-xl font-semibold mt-2">Amplop Online</h1>
+                    <h1 class="text-sm md:text-lg mt-5 md:mt-10">Bagi keluarga dan sahabat yang ingin mengirimkan hadiah, silakan mengirimkannya melalui tautan berikut:</h1>
+                </div>
+            
+                <div class="flex items-center justify-center gap-6 mt-8">
+                    <div class="flex items-center justify-center">
+                        <a href="#" class="flex items-center justify-center text-dark bg-white py-3 px-1 md:py-2 md:px-6 rounded-lg shadow-xl transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-2xl w-auto max-w-xs">
+                            <img src="img/Group 38.png" alt="" class="w-[20px] md:w-[20px] md:mr-2">
+                            <span class="text-sm font-normal md:font-semibold">Kirim Hadiah</span> 
+                        </a>                              
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <a href="#" class="flex items-center justify-center text-dark bg-white py-3 px-1 md:py-2 md:px-6 rounded-lg shadow-xl transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-2xl w-auto max-w-xs">
+                            <img src="img/Group 40.png" alt="" class="w-[20px] md::w-[20px] md:mr-2">
+                            <span class="text-sm font-normal md:font-semibold">Transfer Bank</span> 
+                        </a>                              
+                    </div>  
+                </div>
+
+    
+                <div class="pt-14 text-center">
+                    <h1 class="text-2xl font-semibold font-great-vibes text-white mb-8">Hari yang ditunggu</h1>
+                    <div class="flex justify-center space-x-7 lg:space-x-8 text-white">
+                        <div>
+                            <p id="days" class="text-2xl lg:text-3xl font-playfair-display"></p>
+                            <p class="text-lg lg:text-xl font-playfair-display">Days</p>
+                        </div>
+                        <div>
+                            <p id="hours" class="text-2xl lg:text-3xl font-playfair-display"></p>
+                            <p class="text-lg lg:text-xl font-playfair-display">Hours</p>
+                        </div>
+                        <div>
+                            <p id="minutes" class="text-2xl lg:text-3xl font-playfair-display"></p>
+                            <p class="text-lg lg:text-xl font-playfair-display">Mins</p>
+                        </div>
+                        <div>
+                            <p id="seconds" class="text-2xl lg:text-3xl font-playfair-display"></p>
+                            <p class="text-lg lg:text-xl font-playfair-display">Secs</p>
+                        </div>
+                    </div> 
+                </div>
+            
+            </div>
+
+
+           
+
+
+
+            <div class="relative z-10">
+                <img src="img/elemen/Group 30.png" id="aset10" class="absolute w-[70px] left-[43%] top-40">
+                <img src="img/elemen/kiri.png" id="aset11" class="absolute w-[160px] -left-3">
+                <img src="img/elemen/kanan.png" id="aset12" class="absolute w-[160px] -right-3">
+            </div>
+            <!-- content 6 -->
+            <div div class="bg-cover w-full h-auto pt-44 p-14 px-5 md:px-10" style="background-image: url('img/photo-1698067929252-5821e0c4b874.jpeg');">
+                <div class=" flex items-center justify-center mt-10 mb-10">
+                    <div class=" md:p-4 rounded-lg max-w-md">
+                        <!-- Large Photo Display -->
+                        <div class=" rounded-lg overflow-hidden mb-4">
+                            <img id="largePhoto" src="img/pt-3.jpg" alt="Large Photo" class="w-full h-auto">
+                        </div>
+                
+                        <!-- Thumbnails -->
+                        <div class="flex justify-between">
+                            <img 
+                                src="img/pt-3.jpg" 
+                                alt="Thumbnail 1" 
+                                class="w-16 h-16 object-cover cursor-pointer border border-gray-700 hover:border-blue-500 rounded" 
+                                onclick="updateLargePhoto(this.src)">
+                
+                            <img 
+                                src="img/pt.jpg" 
+                                alt="Thumbnail 2" 
+                                class="w-16 h-16 object-cover cursor-pointer border border-gray-700 hover:border-blue-500 rounded" 
+                                onclick="updateLargePhoto(this.src)">
+                
+                            <img 
+                                src="img/pt1.jpg" 
+                                alt="Thumbnail 3" 
+                                class="w-16 h-16 object-cover cursor-pointer border border-gray-700 hover:border-blue-500 rounded" 
+                                onclick="updateLargePhoto(this.src)">
+                
+                            <img 
+                                src="https://via.placeholder.com/150/0000FF" 
+                                alt="Thumbnail 4" 
+                                class="w-16 h-16 object-cover cursor-pointer border border-gray-700 hover:border-blue-500 rounded" 
+                                onclick="updateLargePhoto(this.src)">
+                        </div>
+                    </div>
+                
+                    <script>
+                        function updateLargePhoto(src) {
+                            document.getElementById('largePhoto').src = src;
+                        }
+                    </script>
+                </div>
+
+                <div class="mb-10">
+                    <iframe class="relative -left-10 w-screen lg:w-[450px] h-[250px] lg:h-[315px]" 
+                            src="https://www.youtube.com/embed/z1RU6N93Po0?si=4YAwuAca0Z7xJ_Q9" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="pt-10 border border-solid bg-white rounded-xl text-dark px-10 pb-10">
+                    <h1 class="text-center text-base md:text-lg font-semibold">Tinggalkan pesan/doa buat kami</h1>
+                    <div id="messageContainer" class="max-h-[500px] mt-6 overflow-hidden transition-all">
+                        <!-- Pesan awal -->
+                        <div class="font-sans text-left mb-10 md:mb-8">
+                            <h1 class="text-sm md:text-sm font-semibold">Raditiya</h1>
+                            <p class="text-sm md:text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur accusamus dignissimos nemo?</p>
+                        </div>
+                        <div class="font-sans text-left mb-10 md:mb-8">
+                            <h1 class="text-sm md:text-sm font-semibold">Suryanto</h1>
+                            <p class="text-sm md:text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, laboriosam.</p>
+                        </div>
+                        <div class="font-sans text-left mb-10 md:mb-8">
+                            <h1 class="text-sm md:text-sm font-semibold">Sutisna</h1>
+                            <p class="text-sm md:text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, adipisci. Enim reiciendis dolorem hic.</p>
+                        </div>
+                    </div>
+                    <!-- Tombol "Lihat lebih banyak" -->
+                    <div class="relative flex items center justify-center">
+                        <button id="loadMore" class="mt-4 bg-white border border-solid border-dark text-dark py-2 px-4 rounded-lg text-sm w-40 mx-auto">
+                        Lihat lebih banyak
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <!-- content 7 -->
+            <div class="bg-cover w-full h-[320px] pt-16 p-14 px-10 relative" style="background-image: url('img/download (1).png');">
+                <div class="absolute inset-0 grid justify-center items-center bg-gradient-to-t from-transparent to-slate-200 opacity-40 w-full z-10"></div>
+                
+                <div class="relative top-44 text-center text-white font-serif">
+                    <h1 class="text-base md:text-lg text-opacity-90">Terimakasih</h1>
+                    <h1 class="text-lg md:text-xl font-bold text-opacity-80">Putri & Putra</h1>
+                </div>
+            </div>
+            
+            
+            <!-- footer -->
+            <div class="bg-abu w-auto py-8">
+
+                <h1 class="text-sm text-center">Made With ❤️ By</h1>
+                <h1 class="text-sm font-bold text-center pb-3">xxxx</h1>
+
+                <div class="text-center text-white space-y-4">
+                    <!-- Instagram Link -->
+                    <a href="https://www.instagram.com/smksmuhammadiyahtasikmalaya/?hl=en" class="flex justify-center items-center fill-current p-2">
+                        <svg role="img" viewBox="0 0 24 24" width="25px" xmlns="http://www.w3.org/2000/svg">
+                            <title>Instagram</title>
+                            <path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
+                    </a>
+            
+                    <h3 class="text-sm">Backsound By:</h3>
+                    <h3 class="text-sm pb-5">Stephen Sanchez - Until I Found You</h3>
+            
+                    <p class="text-sm">© All rights reserved by UP RPL SMKM</p>
+                </div>
+            </div>
+
+
+
+        </div>    
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
